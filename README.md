@@ -1,165 +1,49 @@
-# python-week-8-COVID-19-data-sets
+# 🌍 COVID-19 Vaccination Rollout Analysis
 
-🗂️ Project Segments (Step-by-Step Guide)
-1️⃣ Data Collection
+## 📌 Project Description
 
-Goal: Obtain a reliable COVID-19 dataset.
+This project analyzes and visualizes the COVID-19 vaccination trends in three countries: **Australia**, **Algeria**, and **Argentina**. Using visual storytelling, we aim to uncover insights into how vaccination campaigns progressed, comparing speed, coverage, and anomalies in distribution.
 
-✅ Data Sources:
+---
 
-Our World in Data COVID-19 Dataset (CSV & API)
+## 🎯 Objectives
 
-Johns Hopkins University GitHub Repository
+- Visualize cumulative vaccinations over time for selected countries.
+- Compare the percentage of the population vaccinated in each country.
+- Display a choropleth map to visualize global vaccination disparity (filtered to selected countries).
+- Highlight key patterns, anomalies, and observations using narrative markdown commentary.
 
-👉 Recommended for beginners: Use the cleaned CSV from Our World in Data (easy to load with pandas).
+---
 
-✅ Action:
+## 🧰 Tools & Libraries Used
 
-Download owid-covid-data.csv from the above link.
+- **Python 3.x**
+- **Jupyter Notebook**
+- **pandas** – Data manipulation
+- **matplotlib** – Line and pie charts
+- **seaborn** – Enhanced line plots
+- **plotly.express** – Interactive choropleth maps
 
-Save in your working folder.
+---
 
+## 🚀 How to Run the Project
 
-2️⃣ Data Loading & Exploration
+1. Clone or download the project repository.
+2. Ensure the following Python packages are installed:
+    ```bash
+    pip install pandas matplotlib seaborn plotly
+    ```
+3. Open the `vaccination_analysis.ipynb` file in **Jupyter Notebook** or **JupyterLab**.
+4. Run the notebook cells sequentially to generate plots and insights.
 
-Goal: Load the dataset and explore its structure.
+---
 
-✅ Tasks:
+## 📊 Key Insights & Reflections
 
-Load data using pandas.read_csv().
+1. **Australia** had the most consistent and rapid vaccine rollout, resulting in the highest vaccination coverage.
+2. **Argentina** showed strong early momentum and sustained coverage over time.
+3. **Algeria** exhibited a slow and late-starting vaccination effort, with coverage significantly trailing the other two.
+4. Pie charts clearly show disparities between vaccinated and unvaccinated populations.
+5. The choropleth map effectively highlights the uneven global va
 
-Check columns: df.columns.
 
-Preview rows: df.head().
-
-Identify missing values: df.isnull().sum().
-
-✅ Tools:
-
-pandas
-
-📌 Key columns:
-
-date, location, total_cases, total_deaths, new_cases, new_deaths, total_vaccinations, etc.
-
-
-3️⃣ Data Cleaning
-
-Goal: Prepare data for analysis.
-
-✅ Tasks:
-
-Filter countries of interest (e.g., Kenya, USA, India).
-
-Drop rows with missing dates/critical values.
-
-Convert date column to datetime: pd.to_datetime().
-
-Handle missing numeric values with fillna() or interpolate().
-
-✅ Tools:
-
-pandas
-
-4️⃣ Exploratory Data Analysis (EDA)
-
-Goal: Generate descriptive statistics & explore trends.
-
-✅ Tasks:
-
-Plot total cases over time for selected countries.
-
-Plot total deaths over time.
-
-Compare daily new cases between countries.
-
-Calculate the death rate: total_deaths / total_cases.
-
-✅ Visualizations:
-
-Line charts (cases & deaths over time).
-
-Bar charts (top countries by total cases).
-
-Heatmaps (optional for correlation analysis).
-
-✅ Tools:
-
-matplotlib
-
-seaborn
-
-5️⃣ Visualizing Vaccination Progress
-
-Goal: Analyze vaccination rollouts.
-
-✅ Tasks:
-
-Plot cumulative vaccinations over time for selected countries.
-
-Compare % vaccinated population.
-
-✅ Charts:
-
-Line charts.
-
-Optional: Pie charts for vaccinated vs. unvaccinated.
-
-✅ Tools:
-
-matplotlib
-
-seaborn
-
-6️⃣ Optional: Build a Choropleth Map
-
-Goal: Visualize cases or vaccination rates by country on a world map.
-
-✅ Tools:
-
-Plotly Express
-
-Or geopandas (advanced)
-
-✅ Tasks:
-
-Prepare a dataframe with iso_code, total_cases for the latest date.
-
-Plot a choropleth showing case density or vaccination rates.
-
-7️⃣ Insights & Reporting
-
-Goal: Summarize findings.
-
-✅ Tasks:
-
-Write 3-5 key insights from the data (e.g., "X country had the fastest vaccine rollout").
-
-Highlight anomalies or interesting patterns.
-
-Use markdown cells in Jupyter Notebook to write your narrative.
-
-✅ Deliverables:
-
-A well-documented Jupyter Notebook combining:
-
-Code
-
-Visualizations
-
-Narrative explanations
-
-Optional export: Notebook → PDF or a PowerPoint with screenshots.
-
-🛠️ Recommended Tools:
-
-✅ Jupyter Notebook (or VS Code with Jupyter extension)
-✅ pandas
-✅ matplotlib & seaborn
-✅ Optional: plotly, geopandas
-
-
-
-🌍 Helpful References:
-
-Kaggle Dataset - https://www.kaggle.com/datasets
